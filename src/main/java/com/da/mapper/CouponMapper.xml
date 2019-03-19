@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.da.mapper.CouponMapper">
+
+    <select id="findCouponById" parameterType="int" resultType="com.da.po.Coupon">
+        select * from coupon where id=#{value}
+    </select>
+
+    <select id="findCouponByName" parameterType="java.lang.String" resultType="com.da.po.Coupon">
+        select * from coupon where name like CONCAT('%',#{value},'%')
+    </select>
+
+
+    <insert id="insertCoupon" parameterType="com.da.po.Coupon">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into coupon(name, money, coupon_desc, create_time, expire_time, state)
+        value(#{name}, #{money}, #{couponDesc}, #{createTime}, #{expireTime}, #{state})
+    </insert>
+
+
+    <update id="updateCoupon" parameterType="com.da.po.Coupon">
+        update coupon set name=#{name}, money=#{money}, coupon_desc=#{couponDesc},
+        create_time=#{createTime}, expire_time=#{expireTime},
+        state=#{state, jdbcType=INTEGER} where id = #{id}
+    </update>
+
+
+    <delete id="deleteCoupon" parameterType="java.lang.Integer">
+        delete from coupon where id = #{id}
+    </delete>
+
+
+
+
+</mapper>
+
+
+
+
