@@ -6,9 +6,9 @@ public class Coupon {
     private Integer id;
     private String name;
     private Double money;
-    private String couponDesc;
-    private Date createTime;
-    private Date expireTime;
+    private String coupon_desc;
+    private Date create_time;
+    private Date expire_time;
     private Integer state;
 
     public Integer getId() {
@@ -35,28 +35,28 @@ public class Coupon {
         this.money = money;
     }
 
-    public String getCouponDesc() {
-        return couponDesc;
+    public String getCoupon_desc() {
+        return coupon_desc;
     }
 
-    public void setCouponDesc(String couponDesc) {
-        this.couponDesc = couponDesc;
+    public void setCoupon_desc(String coupon_desc) {
+        this.coupon_desc = coupon_desc;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public Date getExpireTime() {
-        return expireTime;
+    public Date getExpire_time() {
+        return expire_time;
     }
 
-    public void setExpireTime(Date expireTime) {
-        this.expireTime = expireTime;
+    public void setExpire_time(Date expire_time) {
+        this.expire_time = expire_time;
     }
 
     @Override
@@ -65,9 +65,9 @@ public class Coupon {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", money=" + money +
-                ", couponDesc='" + couponDesc + '\'' +
-                ", createTime=" + createTime +
-                ", expireTime=" + expireTime +
+                ", coupon_desc='" + coupon_desc + '\'' +
+                ", create_time=" + create_time +
+                ", expire_time=" + expire_time +
                 ", state=" + state +
                 '}';
     }

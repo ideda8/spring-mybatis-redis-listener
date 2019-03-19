@@ -14,14 +14,6 @@
     <context:component-scan base-package="com.da"/>
 
     <context:property-placeholder location="classpath:jdbc.properties"/>
-    <!---->
-    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value>classpath*:jdbc.properties</value>-->
-            <!--</list>-->
-        <!--</property>-->
-    <!--</bean>-->
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${jdbc.driver}"/>

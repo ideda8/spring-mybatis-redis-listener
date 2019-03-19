@@ -109,7 +109,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
-            <version>1.8.18.RELEASE</version>
+            <version>1.5.2.RELEASE</version>
         </dependency>
 
     </dependencies>
@@ -127,6 +127,7 @@
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.properties</include>
+                    <include>*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
                 <filtering>true</filtering>
